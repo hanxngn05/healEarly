@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Xcode / iOS build
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.mlmodelc/
+
+# Large artifacts and datasets (do not push)
+artifacts/
+ml/images/
+ios/NomaClassifier.mlpackage/
+
+# Node, misc
+node_modules/
