@@ -113,7 +113,9 @@ Demo (Screen Recording)
 -----------------------
 Short demo of the end-to-end flow (on-device, offline):
 
-- [Watch the demo (MP4)](./demo.mp4)
+- Click to watch full video:
+
+[![Demo](./demo.gif)](./demo.mp4)
 
 License
 -------
