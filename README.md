@@ -2,33 +2,20 @@ Noma Detection (iOS + On‑Device ML)
 ===================================
 
 Important: This project is for research and education only and is NOT a medical device. It must not be used for diagnosis or clinical decision-making. If you pursue clinical use, you will need IRB/ethics approval, data governance, informed consent workflows, rigorous validation, and regulatory pathways (e.g., FDA/CE).
-<p align="center">
-  <a href="./demo.mp4">
-    <img src="./demo.gif" width="320" alt="App demo">
-  </a>
-</p>
 
-Authors
--------
-Dr. Saji Vijayan, Han Nguyen, Isabel Cheng, Emily Fang
+## Introduction
+This project is advised by Dr. Saji Vijayan and developed by Han Nguyen, Isabel Cheng, and Emily Fang, whose team placed in the Top 3 at Babson Buildathon 2025.
 
-Recognition
------------
-Top 3 at Babson Buildathon 2025
-
-Project Overview
-----------------
+## Project Overview
 - iOS app to capture face/mouth images and run on-device inference for potential Noma risk screening using a Core ML model.
 - Python pipeline to train a lightweight image classifier (MobileNetV3) from a folder-structured dataset and export to Core ML.
 - Optional next step: add a gait analysis module using CoreMotion accelerometer/gyroscope data and an on-device classifier.
 
-Repository Layout
------------------
+## Repository Layout
 - `ml/`: Training and export scripts (PyTorch → Core ML).
 - `ios/`: SwiftUI/AVFoundation scaffolding for camera capture and on-device inference.
 
-Data Requirements (Noma)
-------------------------
+## Data Requirements (Noma)
 Prepare an `ImageFolder`-style dataset:
 
 ```
@@ -49,8 +36,7 @@ Recommendations:
 - Include physician-labeled ground truth and avoid personally identifiable information; store data securely.
 - Add a separate validation/test split from different subjects than training.
 
-Quickstart: Training
---------------------
+## Quickstart: Training
 1) Create a Python environment and install dependencies:
 
 ```
@@ -73,8 +59,7 @@ Artifacts:
 - `class_index_to_label.json`: class labels mapping
 - `metrics.json`: basic train/val metrics
 
-Export to Core ML
------------------
+## Export to Core ML
 
 ```
 python ml/export_coreml.py \
@@ -88,8 +73,7 @@ Notes:
 - Export requires macOS for certain Core ML conversions; if you run into issues on Linux, try on macOS.
 - The `.mlmodel` should be added to your Xcode project; Xcode will compile it to `.mlmodelc`.
 
-iOS App (Camera + On-Device Inference)
---------------------------------------
+## iOS App (Camera + On-Device Inference)
 Files under `ios/` show how to:
 - Initialize a camera preview.
 - Run Core ML inference via Vision (`VNCoreMLRequest`) on captured frames.
@@ -101,8 +85,7 @@ Steps:
 3) Drag `NomaClassifier.mlmodel` into Xcode; build to generate the model class.
 4) Run on device; grant camera permissions.
 
-Ethics, Consent, Privacy (Must-Haves)
--------------------------------------
+## Ethics, Consent, Privacy (Must-Haves)
 - Obtain explicit informed consent for data capture; support opt-out and deletion.
 - Avoid storing images on-device unless necessary; if stored, encrypt at rest and in transit.
 - Provide clear user-facing disclaimers that this is not a diagnosis tool.
