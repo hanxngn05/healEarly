@@ -1,14 +1,12 @@
+Noma Detection (iOS + On‑Device ML)
+===================================
+
+Important: This project is for research and education only and is NOT a medical device. It must not be used for diagnosis or clinical decision-making. If you pursue clinical use, you will need IRB/ethics approval, data governance, informed consent workflows, rigorous validation, and regulatory pathways (e.g., FDA/CE).
 <p align="center">
   <a href="./demo.mp4">
     <img src="./demo.gif" width="320" alt="App demo">
   </a>
 </p>
-
-Noma Detection (iOS + On‑Device ML)
-===================================
-
-Important: This project is for research and education only and is NOT a medical device. It must not be used for diagnosis or clinical decision-making. If you pursue clinical use, you will need IRB/ethics approval, data governance, informed consent workflows, rigorous validation, and regulatory pathways (e.g., FDA/CE).
-
 Project Overview
 ----------------
 - iOS app to capture face/mouth images and run on-device inference for potential Noma risk screening using a Core ML model.
@@ -101,5 +99,3 @@ Ethics, Consent, Privacy (Must-Haves)
 - Provide clear user-facing disclaimers that this is not a diagnosis tool.
 - Implement subject privacy protections: masking faces, limiting retention, and secure data handling.
 - Conduct bias analysis across demographic subgroups; communicate limitations.
-
- 
