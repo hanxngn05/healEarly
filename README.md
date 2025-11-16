@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="./demo.mp4">
+    <img src="./demo.gif" width="320" alt="App demo">
+  </a>
+</p>
+
 Noma Detection (iOS + On‑Device ML)
 ===================================
 
@@ -96,57 +102,4 @@ Ethics, Consent, Privacy (Must-Haves)
 - Implement subject privacy protections: masking faces, limiting retention, and secure data handling.
 - Conduct bias analysis across demographic subgroups; communicate limitations.
 
-Optional: Gait Analysis (Next Iteration)
-----------------------------------------
-- Capture accelerometer/gyroscope with CoreMotion.
-- Segment into windows (e.g., 4–6 seconds), extract time/frequency domain features, and train a small model.
-- Export to Core ML (similar to image pipeline).
-- Add a toggle/tab in the app to run gait screening.
-
-Troubleshooting
----------------
-- If training is unstable, lower learning rate, increase data, add augmentations, or use class weights.
-- If export fails, ensure consistent model definition between training and export, and try `opset_version=13` for ONNX paths.
-- If iOS inference is slow, use smaller image size (e.g., 192), ensure `preferredMetalDevice`, and throttle frame rate.
-
-Demo (Screen Recording)
------------------------
-Short demo of the end-to-end flow (on-device, offline):
-
-- Click to watch full video:
-
-[![Demo](./demo.gif)](./demo.mp4)
-
-License
--------
-Choose an appropriate license for your use-case (e.g., Apache-2.0). Ensure that dataset licenses and consents permit your intended use.
-
-Hackathon Demo Quickstart (No Dataset)
---------------------------------------
-Need a quick demo without training?
-
-1) Create and install the Python env:
-```
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r ml/requirements.txt
-```
-
-2) Generate a tiny demo Core ML model:
-```
-python ml/make_demo_model.py \
-  --output_mlmodel ./artifacts/demo/NomaClassifier.mlmodel \
-  --image_size 224 \
-  --classes normal,noma
-```
-
-3) iOS app:
-- Use the included XcodeGen project in `ios/`:
-  - `brew install xcodegen`
-  - `cd ios && xcodegen generate && open NomaApp.xcodeproj`
-- Drag `./artifacts/demo/NomaClassifier.mlmodel` into Xcode (or skip it: app falls back to Demo Mode).
-- Ensure Signing is set, plug in an iPhone, and Run.
-
-Notes:
-- If the model is missing, the app automatically runs in Demo Mode and shows plausible predictions based on frame brightness (for demo only).
-- Replace the demo model with a trained one later for real results.
+ 
