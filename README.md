@@ -10,6 +10,11 @@ This project is advised by Dr. Saji Vijayan and developed by Han Nguyen, Isabel 
 - iOS app to capture face/mouth images and run on-device inference for potential Noma risk screening using a Core ML model.
 - Python pipeline to train a lightweight image classifier (MobileNetV3) from a folder-structured dataset and export to Core ML.
 - Optional next step: add a gait analysis module using CoreMotion accelerometer/gyroscope data and an on-device classifier.
+<p align="center">
+  <a href="./demo.mp4">
+    <img src="./demo.gif" width="320" alt="App demo">
+  </a>
+</p>
 
 ## Repository Layout
 - `ml/`: Training and export scripts (PyTorch → Core ML).
