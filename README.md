@@ -4,7 +4,7 @@ Noma Detection (iOS + On‑Device ML)
 Important: This project is for research and education only and is NOT a medical device. It must not be used for diagnosis or clinical decision-making. If you pursue clinical use, you will need IRB/ethics approval, data governance, informed consent workflows, rigorous validation, and regulatory pathways (e.g., FDA/CE).
 
 ## Introduction
-This project is advised by Dr. Saji Vijayan and developed by Han Nguyen, Isabel Cheng, and Emily Fang, whose team placed in the Top 3 at Babson Buildathon 2025.
+This project is developed by Dr. Saji Vijayan, Han Nguyen, Isabel Cheng, and Emily Fang, whose team placed in the Top 3 at Babson Buildathon 2025.
 
 ## Project Overview
 - iOS app to capture face/mouth images and run on-device inference for potential Noma risk screening using a Core ML model.
