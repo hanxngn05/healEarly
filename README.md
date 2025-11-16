@@ -7,6 +7,15 @@ Important: This project is for research and education only and is NOT a medical 
     <img src="./demo.gif" width="320" alt="App demo">
   </a>
 </p>
+
+Authors
+-------
+Dr. Saji Vijayan, Han Nguyen, Isabel Cheng, Emily Fang
+
+Recognition
+-----------
+Top 3 at Babson Buildathon 2025
+
 Project Overview
 ----------------
 - iOS app to capture face/mouth images and run on-device inference for potential Noma risk screening using a Core ML model.
