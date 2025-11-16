@@ -113,7 +113,7 @@ Demo (Screen Recording)
 -----------------------
 Short demo of the end-to-end flow (on-device, offline):
 
-<video src="ScreenRecording_11-15-2025 15-51-24_1.MP4" controls width="420"></video>
+- [Watch the demo (MP4)](./demo.mp4)
 
 License
 -------
