@@ -78,21 +78,7 @@ Notes:
 - Export requires macOS for certain Core ML conversions; if you run into issues on Linux, try on macOS.
 - The `.mlmodel` should be added to your Xcode project; Xcode will compile it to `.mlmodelc`.
 
-## iOS App (Camera + On-Device Inference)
-Files under `ios/` show how to:
-- Initialize a camera preview.
-- Run Core ML inference via Vision (`VNCoreMLRequest`) on captured frames.
-- Display the predicted label and confidence.
-
-Steps:
-1) Create a new Xcode SwiftUI app (iOS 16+ recommended).
-2) Drag `ios/*.swift` into your project (Copy items if needed).
-3) Drag `NomaClassifier.mlmodel` into Xcode; build to generate the model class.
-4) Run on device; grant camera permissions.
-
-## Ethics, Consent, Privacy (Must-Haves)
+## Ethics, Consent, Privacy
 - Obtain explicit informed consent for data capture; support opt-out and deletion.
-- Avoid storing images on-device unless necessary; if stored, encrypt at rest and in transit.
 - Provide clear user-facing disclaimers that this is not a diagnosis tool.
-- Implement subject privacy protections: masking faces, limiting retention, and secure data handling.
 - Conduct bias analysis across demographic subgroups; communicate limitations.
